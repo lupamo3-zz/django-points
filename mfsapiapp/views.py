@@ -6,9 +6,6 @@ from rest_framework.parsers import JSONParser
 # Create your views here.
 @csrf_exempt
 def pClosest(request):
-    # points, K
-    # print("show points", points)
-    # print("Show k", K)
     """
     Function to get closest points,
     points: list of points
@@ -28,14 +25,3 @@ def pClosest(request):
     
     elif request.method == 'GET':
         return JsonResponse(points, safe=False)
-    
-    
-# points = [[3, 3], [5, -1], [-2, 4]]
-# points = [(2,3), (1,1), (5, 4)]
- 
-# K = 2
-
-# request.method == 'POST'
-
-# print(pClosest(request, points, K))
-

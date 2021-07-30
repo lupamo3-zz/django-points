@@ -8,8 +8,8 @@ class PointsSerializer(serializers.ModelSerializer):
         fields = ('name', 'points', 'points_pair')
 
     name = serializers.CharField(max_length=100)
-    points = serializers.CharField(max_length=100)
-    points_pair = serializers.CharField(max_length=100)
+    points = serializers.ListField()
+    points_pair = serializers.ListField()
 
     def create(self, validated_data):
         """

@@ -30,11 +30,7 @@ def pClosest(request):
         points_sorted = points[:K]
 
         K = data['K']
-        serializer = PointsSerializer(data=
-            [K, 
-            points, 
-            points_sorted]
-            , many=True)
+        serializer = PointsSerializer(data={'name':K, 'points':points, 'points_pair': points_sorted})
         print('hello', serializer)
         if serializer.is_valid():
             return Response(serializer.data, status=status.HTTP_200_OK)

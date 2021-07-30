@@ -81,6 +81,10 @@ pip install -r requirements.txt
 ```sh
 python3 manage.py runserver
 ```
+7. Run tests
+```sh
+python3 manage.py test
+```
 
 ### Test the application on Postman
 ## Test The API end-points

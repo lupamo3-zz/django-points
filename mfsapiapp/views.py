@@ -3,6 +3,8 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
 from rest_framework.decorators import api_view
+from rest_framework import status
+from rest_framework.response import Response
 
 from .serializers import PointsSerializer
 from .models import Points
@@ -25,6 +27,7 @@ def pClosest(request):
         K = data['K']
 
         points.sort(key = lambda K: K[0]**2 + K[1]**2)
+        points_sorted = points[:K]
     
         return HttpResponse(points[:K], content_type='json')
     

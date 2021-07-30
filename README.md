@@ -128,6 +128,6 @@ Contributions are what make the open source community such an amazing place to b
 
 Your Name - [@nlanjichi](https://twitter.com/nlanjichi)
 
-Project Link: [https://github.com/lupamo3/flask-crud/tree/master](https://github.com/lupamo3/django-points/tree/master)
+Project Link: [https://github.com/lupamo3/django-points](https://github.com/lupamo3/django-points/tree/master)
 
 

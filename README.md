@@ -14,7 +14,7 @@ Django Coordinates // Distance between coordinates
 <br />
 <p align="center">
 
-  <h3 align="center">Flask Collect Details API</h3>
+  <h3 align="center">Django Co-ordinates API</h3>
 </p>
 
 
@@ -22,27 +22,22 @@ Django Coordinates // Distance between coordinates
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-An application that allows users to create accounts, create certificates, view certificates, edit certificates, edit their profile, view certificate statistics and send the certificates via Email.
+An application that should have an API endpoint that accepts a string of comma separated
+points for example “(2,3), (1,1), (5, 4), ...” and calculates the closest points. It then stores them
+in a table with the following details:
+* The string of points submitted
+* The result of the computation: the closest points pair
 
-.
+
 
 Here are some of the features:
-* Create Accounts
-* Create Certificates
-* Edit Certificates
-* View Certificates
-* Edit their profiles
-* Send certificates via email
-* View Certificate Statistics
-* It has implemented DRY principles  :smile:
-* Use of JWT tokens to authenticate the routes
-* Statistics or records can be gotten
+* Input Points and create closest two coordinates
 
 
 
 ### Built With
 
-* [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+* [Django](https://www.django-rest-framework.org/)
 * [Python](https://www.python.org/)
 * [PostgresQl](https://www.postgresql.org/)
 
@@ -66,11 +61,11 @@ This is an example of how to list things you need to use the software and how to
 1. Access Github [https://github.com](https://github.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/lupamo3/flask-crud.git
+   git clone https://github.com/lupamo3/django-points/tree/master
    ```
-3. Change directory into the iReporter-Flask directory :
+3. Change directory into the Django points directory :
    ```sh
-   cd iReporter-Flask
+   cd django-points
    ```
 4. Create and activate your virtual environment :
 
@@ -84,26 +79,19 @@ pip install -r requirements.txt
 ```
 6. Run the application
 ```sh
-flask run
+python3 manage.py runserver
 ```
 
 ### Test the application on Postman
 ## Test The API end-points
- - Run [CertificateTest](https://farifu-flask.herokuapp.com/) on your postman to test the URLs
+ - Run [Co-ordinates Endpoints](https://mfs-djangorf.herokuapp.com/) on your postman to test the URLs
 
 or use:
 
 | URL                                 | METHOD                 | MESSAGE                                |
 | ------------------------------------|:----------------------:| --------------------------------------:|
-|/api/v1/personal/                    | POST                   | Create a user/student.                 |
-|/api/v1/personal/                    | GET                    | Get all students.                      |
-|api/v1/personal/<int:user_id>        | GET<int:id>            | Get a Specific Student                 |
-|api/v1/personal/me                   | PUT                    | Update Specific Student  records       |
-|api/v1/personal/me                   | DELETE                 | Delete a Student record                |
-|api/v1/personal/me                   | GET                    | Get a Students personal record         |
-|api/v1/personal/login                | POST                   | Login a student.                       |
-|/api/v1/certificate/                 | POST                   | Create a Certificate.                  |
-|/api/v1/certificate/<int:certificate_id>| GET<int:certificate_id>| Get a specific Certificate          |  
+|points/                              | POST                   | Input an Array and number of points.   |
+
 
 ---
 
@@ -140,6 +128,6 @@ Contributions are what make the open source community such an amazing place to b
 
 Your Name - [@nlanjichi](https://twitter.com/nlanjichi)
 
-Project Link: [https://github.com/lupamo3/flask-crud/tree/master](https://github.com/lupamo3/flask-crud/tree/master)
+Project Link: [https://github.com/lupamo3/flask-crud/tree/master](https://github.com/lupamo3/django-points/tree/master)
 
 

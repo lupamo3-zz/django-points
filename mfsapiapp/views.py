@@ -28,8 +28,19 @@ def pClosest(request):
 
         points.sort(key = lambda K: K[0]**2 + K[1]**2)
         points_sorted = points[:K]
+
+        K = data['K']
+        serializer = PointsSerializer(data=
+            [K, 
+            points, 
+            points_sorted]
+            , many=True)
+        print('hello', serializer)
+        if serializer.is_valid():
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
-        return HttpResponse(points[:K], content_type='json')
+        # return HttpResponse(points[:K], content_type='json')
     
     elif request.method == 'GET':
         return JsonResponse(points, safe=False)

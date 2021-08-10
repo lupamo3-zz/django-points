@@ -29,11 +29,9 @@ def pClosest(request):
         points.sort(key = lambda K: K[0]**2 + K[1]**2)
         points_sorted = points[:K]
 
-        K = data['K']
         serializer = PointsSerializer(data={'name':K, 'points':points, 'points_pair': points_sorted})
-        print('hello', serializer)
         if serializer.is_valid():
-            return Response(serializer.data, status=status.HTTP_200_OK)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
     elif request.method == 'GET':
